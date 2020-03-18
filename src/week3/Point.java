@@ -71,5 +71,4 @@ public class Point {
         JOptionPane.showMessageDialog(null, "Point: " + name + "(" + x + "," + y + ")");
     }
 
-
 }
