@@ -23,6 +23,7 @@ public class Bai5HienThiHaiSo {
                 "Hien thi hai so", JOptionPane.INFORMATION_MESSAGE);
         System.exit(0);
     }
-    // thử tý
+    // thử tý lần 2
+    //thử dùng
 
 }
