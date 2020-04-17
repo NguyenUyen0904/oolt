@@ -2,7 +2,7 @@ package week2;
 
 import java.util.Scanner;
 
-public class nyHuy {
+public class Test {
     public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
 //        System.out.println("Nhập vào số nguyên dương n có 3 chữ số  :");

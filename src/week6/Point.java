@@ -1,7 +1,7 @@
-package week3;
+package week6;
 
 import javax.swing.*;
-import javax.swing.*;
+import java.text.DecimalFormat;
 
 public class Point {
     private String name;
@@ -71,11 +71,9 @@ public class Point {
         JOptionPane.showMessageDialog(null, "Point: " + name + "(" + x + "," + y + ")");
     }
 
-    public static void main(String[] args) {
-        Point huy = new Point("B", 3.14f, 3.96f);
-        huy.nhap();
-        huy.hienThi();
-
+    @Override
+    public String toString() {
+        DecimalFormat decimalFormat = new DecimalFormat("#.#");
+        return name + "(" + decimalFormat.format(x) + "," + decimalFormat.format(y) + ")";
     }
-
 }
