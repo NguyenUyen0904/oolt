@@ -3,7 +3,12 @@ package week6;
 public class TestQuad {
     public static void main(String[] args) {
         //Goi ham khoi tao khong tham so
-        Quadrangle q1 = new Quadrangle();
+        Quadrangle q1 = new Quadrangle() {
+            @Override
+            public double getArea() {
+                return 0;
+            }
+        };
 
         q1.hienThi();
 
@@ -13,10 +18,20 @@ public class TestQuad {
         Point p4 = new Point(2, 2);
 
         //Goi ham khoi tao 4 tham so
-        Quadrangle q2 = new Quadrangle(p1, p2, p3, p4);
+        Quadrangle q2 = new Quadrangle(p1, p2, p3, p4) {
+            @Override
+            public double getArea() {
+                return 0;
+            }
+        };
         q2.hienThi();
 
-        Quadrangle q3 = new Quadrangle();
+        Quadrangle q3 = new Quadrangle() {
+            @Override
+            public double getArea() {
+                return 0;
+            }
+        };
         q3.nhap();
         q3.hienThi();
     }

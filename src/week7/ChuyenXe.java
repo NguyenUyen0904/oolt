@@ -2,39 +2,47 @@ package week7;
 
 import java.util.Scanner;
 
-public abstract class ChuyenXe {
-    protected String MaCX, TenTX, SoX;
+public class ChuyenXe {
+    protected String maCX, tenTX, soX;
     protected double doanhThu;
 
     public ChuyenXe(String maCX, String tenTX, String soX, double doanhThu) {
-        MaCX = maCX;
-        TenTX = tenTX;
-        SoX = soX;
+        this.maCX = maCX;
+        this.tenTX = tenTX;
+        this.soX = soX;
         this.doanhThu = doanhThu;
     }
 
+    public ChuyenXe() {
+        this.maCX = "";
+        this.tenTX = "";
+        this.soX = "";
+        this.doanhThu = 0;
+
+    }
+
     public String getMaCX() {
-        return MaCX;
+        return maCX;
     }
 
     public void setMaCX(String maCX) {
-        MaCX = maCX;
+        this.maCX = maCX;
     }
 
     public String getTenTX() {
-        return TenTX;
+        return tenTX;
     }
 
     public void setTenTX(String tenTX) {
-        TenTX = tenTX;
+        this.tenTX = tenTX;
     }
 
     public String getSoX() {
-        return SoX;
+        return soX;
     }
 
     public void setSoX(String soX) {
-        SoX = soX;
+        this.soX = soX;
     }
 
     public double getDoanhThu() {
@@ -44,7 +52,9 @@ public abstract class ChuyenXe {
     public void setDoanhThu(double doanhThu) {
         this.doanhThu = doanhThu;
     }
+
     Scanner sc = new Scanner(System.in);
+
     public void nhap() {
         System.out.println("Nhap ma so chuyen xe:");
         setMaCX(sc.nextLine());
@@ -55,14 +65,13 @@ public abstract class ChuyenXe {
         System.out.println("Doanh thu:");
         setDoanhThu(sc.nextDouble());
     }
+
     @Override
     public String toString() {
-        return "ChuyenXe{" +
-                "MaCX='" + MaCX + '\'' +
-                ", TenTX='" + TenTX + '\'' +
-                ", SoX='" + SoX + '\'' +
-                ", doanhThu=" + doanhThu +
-                '}';
+        return "\nMaCX=" + maCX +
+                "\nTenTX=" + tenTX +
+                "\nSoX=" + soX
+                ;
     }
 }
 

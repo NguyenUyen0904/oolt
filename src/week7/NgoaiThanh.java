@@ -1,6 +1,6 @@
 package week7;
 
-public class NgoaiThanh extends ChuyenXe{
+public class NgoaiThanh extends ChuyenXe {
     private String noiDen;
     private double soNgay;
 
@@ -8,6 +8,13 @@ public class NgoaiThanh extends ChuyenXe{
         super(maCX, tenTX, soX, doanhThu);
         this.noiDen = noiDen;
         this.soNgay = soNgay;
+    }
+
+    public NgoaiThanh() {
+        super();
+        this.soNgay = 0;
+        this.noiDen = "";
+
     }
 
     public String getNoiDen() {
@@ -30,6 +37,17 @@ public class NgoaiThanh extends ChuyenXe{
     public void nhap() {
         super.nhap();
         System.out.println("Noi den ");
-        setNoiDen(sc.nextLine());
+        setNoiDen(sc.next());
+        System.out.println("So ngay: ");
+        setSoNgay(sc.nextInt());
+    }
+
+    @Override
+    public String toString() {
+        return "Ngoai thanh: " + super.toString() +
+                "\nnoiDen=" + noiDen +
+                "\nsoNgay=" + soNgay +
+                "\nDoanh thu:" + doanhThu +
+                '}';
     }
 }

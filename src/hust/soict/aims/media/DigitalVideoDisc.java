@@ -1,100 +1,13 @@
 package hust.soict.aims.media;
 
-public class DigitalVideoDisc extends Media{
-
-//	private String title;
-//
-//	private String category;
-//
-	private String director;
-
-	private int length;
-
-	public DigitalVideoDisc(String title, String category, float cost, String director, int length) {
-		super(title, category, cost);
-		this.director = director;
-		this.length = length;
-	}
-//private float cost;
-
-	/**
-	 * Constructor for DigitalVideoDisc
-	 */
-//	public DigitalVideoDisc() {
-//		super();
-//	}
-//
-//	/**
-//	 * Returns the title
-//	 */
-//	public String getTitle() {
-//		return title;
-//	}
-//
-//	/**
-//	 * Sets the title
-//	 */
-//	public void setTitle(String title) {
-//		this.title = title;
-//	}
-//
-//	/**
-//	 * @return Returns the category.
-//	 */
-//	public String getCategory() {
-//		return category;
-//	}
-//
-//	/**
-//	 * @param category
-//	 *            The category to set.
-//	 */
-//	public void setCategory(String category) {
-//		this.category = category;
-//	}
-//
-//	/**
-//	 * @return Returns the cost.
-//	 */
-//	public float getCost() {
-//		return cost;
-//	}
-//
-//	/**
-//	 * @param cost
-//	 *            The cost to set.
-//	 */
-//	public void setCost(float cost) {
-//		this.cost = cost;
-//	}
-//
-//	/**
-//	 * @return Returns the director.
-	 //*/
-	public String getDirector() {
-		return director;
+public class DigitalVideoDisc extends Disc implements Playable {
+	public DigitalVideoDisc(String title, String category, float cost, int lenght, String director) {
+		super(title, category, cost, lenght, director);
 	}
 
-	/**
-	 * @param director
-	 *            The director to set.
-	 */
-	public void setDirector(String director) {
-		this.director = director;
-	}
-
-	/**
-	 * @return Returns the length.
-	 */
-	public int getLength() {
-		return length;
-	}
-
-	/**
-	 * @param length
-	 *            The length to set.
-	 */
-	public void setLength(int length) {
-		this.length = length;
+	@Override
+	public void play() {
+		System.out.println("Playing DVD:"+getTitle());
+		System.out.println("DVD lenght:"+getLenght());
 	}
 }

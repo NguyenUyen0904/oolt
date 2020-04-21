@@ -1,6 +1,6 @@
 package week7;
 
-public class NoiThanh extends ChuyenXe{
+public class NoiThanh extends ChuyenXe {
     private String soTuyen;
     private double soKm;
 
@@ -8,6 +8,13 @@ public class NoiThanh extends ChuyenXe{
         super(maCX, tenTX, soX, doanhThu);
         this.soTuyen = soTuyen;
         this.soKm = soKm;
+    }
+
+    public NoiThanh() {
+        super();
+        this.soTuyen = "";
+        this.soKm = 0;
+
     }
 
     public String getSoTuyen() {
@@ -24,5 +31,22 @@ public class NoiThanh extends ChuyenXe{
 
     public void setSoKm(double soKm) {
         this.soKm = soKm;
+    }
+
+    @Override
+    public void nhap() {
+        super.nhap();
+        System.out.println("Nhap so tuyen:");
+        setSoTuyen(sc.next());
+        System.out.println("So Km: ");
+        setSoKm(sc.nextDouble());
+    }
+
+    @Override
+    public String toString() {
+        return "NoiThanh: " + super.toString() +
+                "\nsoTuyen=" + soTuyen +
+                "\nsoKm=" + soKm + "\nDoanh thu: " + doanhThu
+                ;
     }
 }
