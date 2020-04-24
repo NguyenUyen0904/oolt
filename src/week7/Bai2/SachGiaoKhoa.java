@@ -1,4 +1,6 @@
-package week7;
+package week7.Bai2;
+
+import week7.Bai2.Sach;
 
 public class SachGiaoKhoa extends Sach {
     private int tinhTrang;//mới thì nhập 1, cũ nhập 0;

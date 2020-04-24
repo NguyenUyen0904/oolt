@@ -1,4 +1,4 @@
-package week7;
+package week7.Bai1;
 
 public class ListChuyenXe {
     private ChuyenXe[] CX = new ChuyenXe[100];

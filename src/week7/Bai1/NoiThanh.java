@@ -1,4 +1,6 @@
-package week7;
+package week7.Bai1;
+
+import week7.Bai1.ChuyenXe;
 
 public class NoiThanh extends ChuyenXe {
     private String soTuyen;

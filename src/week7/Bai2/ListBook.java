@@ -1,4 +1,4 @@
-package week7;
+package week7.Bai2;
 
 public class ListBook {
     private static final int  MAX=100;
