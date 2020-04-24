@@ -9,9 +9,10 @@ public class SachGiaoKhoa extends Sach {
         super(maSach, tieuDe, ngayNhap, nhaXuatBan, donGia, soLuong);
         this.tinhTrang = tinhTrang;
     }
-    public SachGiaoKhoa(){
+
+    public SachGiaoKhoa() {
         super();
-        this.tinhTrang=1;
+        this.tinhTrang = 1;
     }
 
     public int getTinhTrang() {
@@ -38,9 +39,9 @@ public class SachGiaoKhoa extends Sach {
 
     @Override
     public String toString() {
-        return "SachGiaoKhoa:" +super.toString()+
-                ",tinhTrang=" + tinhTrang +'\''
-               // ",thanhTien=" + thanhTien
+        return "SachGiaoKhoa:  " + super.toString() +
+                ",tinhTrang=" + tinhTrang + '\''
+                // ",thanhTien=" + thanhTien
                 ;
     }
 }

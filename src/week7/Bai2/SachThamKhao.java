@@ -5,17 +5,19 @@ import week7.Bai2.Sach;
 public class SachThamKhao extends Sach {
     private String chuyenNganh;
     private double thue;
-    private static double count=0;
+    private static double count = 0;
+
     public SachThamKhao(String maSach, String tieuDe, String ngayNhap, String nhaXuatBan, double donGia, double soLuong, String chuyenNganh, double thue) {
         super(maSach, tieuDe, ngayNhap, nhaXuatBan, donGia, soLuong);
         this.chuyenNganh = chuyenNganh;
         this.thue = thue;
         count++;
     }
-    public SachThamKhao(){
+
+    public SachThamKhao() {
         super();
-        this.chuyenNganh="";
-        this.thue=0;
+        this.chuyenNganh = "";
+        this.thue = 0;
     }
 
     public String getChuyenNganh() {
@@ -42,12 +44,13 @@ public class SachThamKhao extends Sach {
         System.out.println("Thuế:");
         setThue(sc.nextDouble());
     }
+
     @Override
     public String toString() {
-        return "SachThamKhao:" +super.toString()+
+        return "SachThamKhao: " + super.toString() +
                 "chuyenNganh='" + chuyenNganh + '\'' +
                 ", thue=" + thue + '\'' +
-                ",thanhTien="+(donGia*soLuong+thue)
+                ",thanhTien=" + (donGia * soLuong + thue)
                 ;
     }
 }

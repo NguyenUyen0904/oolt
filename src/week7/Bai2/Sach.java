@@ -3,8 +3,9 @@ package week7.Bai2;
 import java.util.Scanner;
 
 public abstract class Sach {
-    protected String maSach,tieuDe,ngayNhap,nhaXuatBan;
-    protected double donGia,soLuong;
+    protected String maSach, tieuDe, ngayNhap, nhaXuatBan;
+    protected double donGia, soLuong;
+
     //protected double thanhTien;
     public Sach(String maSach, String tieuDe, String ngayNhap, String nhaXuatBan, double donGia, double soLuong) {
         this.maSach = maSach;
@@ -13,7 +14,7 @@ public abstract class Sach {
         this.nhaXuatBan = nhaXuatBan;
         this.donGia = donGia;
         this.soLuong = soLuong;
-      //  this.thanhTien=thanhTien;
+        //  this.thanhTien=thanhTien;
     }
 
     public Sach() {
@@ -23,7 +24,7 @@ public abstract class Sach {
         this.nhaXuatBan = "";
         this.donGia = 0;
         this.soLuong = 0;
-       // this.thanhTien=0;
+        // this.thanhTien=0;
     }
 
 //    public double getThanhTien() {
@@ -82,8 +83,10 @@ public abstract class Sach {
     public void setSoLuong(double soLuong) {
         this.soLuong = soLuong;
     }
+
     Scanner sc = new Scanner(System.in);
-    protected void nhap(){
+
+    protected void nhap() {
         System.out.println("Nhập mã số sách:");
         setMaSach(sc.nextLine());
         System.out.println("Nhập tiêu đề: ");
@@ -101,7 +104,7 @@ public abstract class Sach {
 
     @Override
     public String toString() {
-        return  "maSach='" + maSach + '\'' +
+        return "maSach='" + maSach + '\'' +
                 ", tieuDe='" + tieuDe + '\'' +
                 ", ngayNhap='" + ngayNhap + '\'' +
                 ", nhaXuatBan='" + nhaXuatBan + '\'' +
@@ -110,3 +113,4 @@ public abstract class Sach {
                 ;
     }
 }
+//Cần hỏi anh Huy tại sao lỗi khi nhập nhà xuất bản. Phương thức Thành tiền nên xử lí sao.

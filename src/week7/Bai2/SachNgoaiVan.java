@@ -9,9 +9,10 @@ public class SachNgoaiVan extends Sach {
         super(maSach, tieuDe, ngayNhap, nhaXuatBan, donGia, soLuong);
         this.ngonNgu = ngonNgu;
     }
-    public SachNgoaiVan(){
+
+    public SachNgoaiVan() {
         super();
-        this.ngonNgu="";
+        this.ngonNgu = "";
     }
 
     public String getNgonNgu() {
@@ -32,9 +33,9 @@ public class SachNgoaiVan extends Sach {
 
     @Override
     public String toString() {
-        return "SachNgoaiVan:" + super.toString()+
+        return "SachNgoaiVan:  " + super.toString() +
                 ",ngonNgu='" + ngonNgu + '\'' +
-                ",thanhTien="+(soLuong*donGia*1.2)
+                ",thanhTien=" + (soLuong * donGia * 1.2)
                 ;
     }
 }
