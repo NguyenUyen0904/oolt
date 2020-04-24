@@ -1,6 +1,4 @@
-package week7;
-
-import java.util.Objects;
+package week6;
 
 public class MyValue {
     private int number;
