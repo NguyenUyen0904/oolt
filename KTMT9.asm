@@ -12,17 +12,17 @@ Diem: .asciiz "Nhap diem <= 10"
 
 	
 Main:
-	lw $s1,MAX_OF_SV #max of sinh vien  ??c d? li?u word t? b? nh? ??a vào thanh ghi s1
-	#nhap n( NH?p s? l??ng sinh viên 
-	li $v0,51# g?i h?p tho?i ( c?a s?) nh?p s? l??ng sinh viên 
+	lw $s1,MAX_OF_SV #max of sinh vien  doc d? lieu word tu bo nho vao thanh ghi s1
+	#nhap n( Nhap so luong sinh vien )
+	li $v0,51# goi hop thoai nhap vao so luong sinh  
 	la $a0,Number_Of_SV #$a0 tiêu ??: Nh?p vào s? l??ng sinh viên MAX=10
-	syscall#$a0 s? sinh viên 
+	syscall#$a0 nh?p vào s? sinh viên 
 		
-	slt $t0,$s1,$a0  # so sánh $s1 < $a0 ? n?u ?úng thì $t0=1
-	bne $t0,$0,Main #n?u ($t0!=0) thì nh?y l?i l?nh main 
-	slt $t0,$0,$a0# còn n?u ($t0#0) sai hay $0<$a0 ?úng thì th?c hi?n so sánh ti?p $0<$a0??
-	bne $t0,$0,Continue #n?u ($t0!=$0) t?c là ($0<$a0) ?úng thì nh?y l?nh Countinue
-	li $v0,55# n?u 0<$a0 g?i h?p tho?i thông báo 
+	slt $t0,$s1,$a0  # so sánh $s1 < $a0 ? n?u ?úng thì $t0=1( so sánh s? sinh viên max có bé h?n s? sinh viên nh?p vào ko ??)
+	bne $t0,$0,Main #n?u ($t0!=0) thì nh?y l?i l?nh main ( n?u có bé h?n thì l?p l?i hàm main)
+	slt $t0,$0,$a0# còn n?u ($t0#0) sai hay $0<$a0 ?úng thì th?c hi?n so sánh ti?p $0<$a0??( so sánh ti?p s? sinh viên nh?p vào có l?n h?n 0 ko ??)
+	bne $t0,$0,Continue #n?u ($t0!=$0) t?c là ($0<$a0) ?úng thì nh?y l?nh Countinue( N?u mà s? sinh viên l?n h?n 0 thì nh?y sang l?nh Continue)
+	li $v0,55# n?u 0<$a0 g?i h?p tho?i thông báo ( còn n?u ko thì g?i h?p tho?i thông báo r?ng )
 	la $a0,	Message1# $a0 tiêu ?? :"so luong SV phai > 0"
 	syscall# Nh?p l?i $a0 la s? l??ng sinh viên c?a l?p 
 	j Main
